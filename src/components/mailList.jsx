@@ -11,6 +11,7 @@ import EmailSection from '../emailSection';
 import InboxIcon from '@mui/icons-material/Inbox';
 import PeopleIcon from "@mui/icons-material/People";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
+import EmailList from '../emailList';
 
 function MailList() {
   return (
@@ -73,6 +74,12 @@ function MailList() {
           className="flex-1"
         />
       </div>
+
+      <div>
+        <EmailList  title="twitch" subject={"Hello fellas"} description={"this is a test"} time={"10pm"}/>
+                <EmailList   title="twitch" subject={"Hello fellas"} description={"this is a test this is a test this is a test this is a test this is a test"} time={"10pm"}/>
+
+     </div>
     </div>
   );
 }
