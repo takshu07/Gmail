@@ -1,16 +1,20 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import Switch from "@mui/material/Switch";
 import "./App.css";
-import Header from "./header";
-import Sidebar from "./sidebar";
-
+import Header from "./components/header";
+import Sidebar from "./components/sidebar";
+import { BrowserRouter  } from "react-router-dom";
+import Mail from "./components/mail";
+import MailList from "./components/mailList";
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Header />
-      <Sidebar />
-    </>
+      <div className="flex flex-row">
+         <Sidebar />  
+        <MailList/> 
+      </div>
+           
+    </BrowserRouter>
   );
 }
 

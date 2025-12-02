@@ -4,8 +4,8 @@ function SidebarOption({Icon, title, number,selected }) {
     <div className="flex rounded-xl group  font-normal bg-white  p-3 items-center gap-3 cursor-pointer
     ${selected ?  bg-white : hover:bg-red-100  } ">
       
-      <div className="flex gap-35 text-gray-500 ">
-<div className="flex gap-3 ">
+      <div className="flex gap-20 text-gray-500 ">
+<div className="flex  ">
         <Icon/>
       <h3>{title}</h3>
       </div>

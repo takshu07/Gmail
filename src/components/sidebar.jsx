@@ -1,13 +1,22 @@
 import AddIcon from "@mui/icons-material/Add";
 import InboxIcon from "@mui/icons-material/Inbox";
-import SideabarOption from "./sidebarOption";
+import SideabarOption from "../sidebarOption";
 import StartIcon from "@mui/icons-material/Star";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import LabelImportantIcon from "@mui/icons-material/LabelImportant";
 import NearmeIcon from "@mui/icons-material/NearMe";
 import NoteIcon from "@mui/icons-material/Note";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import IconButton from "@mui/material/IconButton";
+import PersonIcon from "@mui/icons-material/Person";
+import DuoIcon from "@mui/icons-material/Duo";
+import PhoneIcon from "@mui/icons-material/Phone";
+import { useState } from "react";
+import EmailSection from "../emailSection";
+import PeopleIcon from "@mui/icons-material/People";
+import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 function Sidebar() {
+  const [selected, setSelected] = useState(false);
   return (
     <div>
       <button
@@ -36,46 +45,33 @@ function Sidebar() {
           number={54}
           selected={true}
         />
-        <SideabarOption
-          title="Starred "
-          Icon={StartIcon}
-          number={54}
-          
-        />
-         <SideabarOption
-          title="Snoozed "
-          Icon={AccessTimeIcon}
-          number={54}
-          
-        />
+        <SideabarOption title="Starred " Icon={StartIcon} number={54} />
+        <SideabarOption title="Snoozed " Icon={AccessTimeIcon} number={54} />
         <SideabarOption
           title="Important "
           Icon={LabelImportantIcon}
           number={54}
-          
         />
 
-        <SideabarOption
-          title="Sent "
-          Icon={NearmeIcon}
-          number={54}
-          
-        />
+        <SideabarOption title="Sent " Icon={NearmeIcon} number={54} />
 
-        <SideabarOption
-          title="Drafts "
-          Icon={NoteIcon}
-          number={54}
-          
-        />
+        <SideabarOption title="Drafts " Icon={NoteIcon} number={54} />
 
-        <SideabarOption
-          title="More "
-          Icon={ExpandMoreIcon}
-          number={54}
-          
-        />
+        <SideabarOption title="More " Icon={ExpandMoreIcon} number={54} />
       </div>
+      <div className="flex items-cente ">
+        <IconButton>
+          <PersonIcon />
+        </IconButton>
+        <IconButton>
+          <DuoIcon />
+        </IconButton>
+
+        <IconButton>
+          <PhoneIcon />
+        </IconButton>
+      </div>
+
     </div>
   );
 }
